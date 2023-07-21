@@ -1,16 +1,8 @@
 {
-    "tasks": [
-        {
-            "id": "1",
-            "text": "buy fruits and vegetables"
-        },
-        {
-            "id": "2",
-            "text": "I got  to gym in morning"
-        },
-        {
-            "id": "3",
-            "text": "need buy new phone in next month"
-        }
-    ]
+  "tasks": [
+    {
+      "id": "a369b44a-8b53-45c6-8227-1a65c3ba0b90",
+      "text": "Need to buy apple form market"
+    }
+  ]
 }
