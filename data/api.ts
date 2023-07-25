@@ -1,3 +1,4 @@
+import path from "path";
 import { ITask } from "./types/tasks"
 
 const baseUrl = "http://localhost:3001"
@@ -7,7 +8,7 @@ export const getAllTodos = async (): Promise<ITask[]> => {
     return todos;
 }
 export const addTodo = async (todo: ITask): Promise<ITask> => {
-    const res = await fetch(`http://localhost:3001/tasks`, {
+    const res = await fetch(`${baseUrl}/tasks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(todo)
@@ -15,6 +16,20 @@ export const addTodo = async (todo: ITask): Promise<ITask> => {
 
     const newTodo = await res.json();
     return newTodo;
-
-
 }
+export const editTodo = async (todo: ITask): Promise<ITask> => {
+    const res = await fetch(`${baseUrl}/tasks/${todo.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(todo)
+    });
+
+    const editTodo = await res.json();
+    return editTodo;
+}
+export const deleteTodo = async (Id: string): Promise<void> => {
+    const res = await fetch(`${baseUrl}/tasks/${Id}`, {
+        method: 'PUT',
+    });
+}
+
