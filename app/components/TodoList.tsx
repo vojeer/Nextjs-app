@@ -11,17 +11,15 @@ const TodoLIST: React.FC<TodoListProps> = ({ tasks }) => {
             <table className="table">
                 {/* head */}
                 <thead>
-                    <tr> 
+                    <tr>
                         <th>Tasks</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>{tasks.map((task) => <Task task={task}/>
-                      
-                    )}</td>
-                    </tr>
+                    
+                        {tasks.map((task) => <Task task={task} />)}
+                   
                 </tbody>
             </table>
         </div>

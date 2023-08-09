@@ -31,13 +31,13 @@ const Task: React.FC<TaskProps> = ({ task }) => {
     router.refresh();
   }
   return (
-    <tr key={task.id} >
+    <tr>
       <td className="w-full">{task.text}</td>
-      <td className="flex gap-5">
+      <td className="flex gap-">
         <FiEdit onClick={() => setModalOpenEdit(true)} cursor={'pointer'} className="text-blue-500" size={20} />
         <Modal modalOpen={modalOpenEdit} setModalOpen={setModalOpenEdit}>
           <form onSubmit={handleSubmitEditTodo}>
-            <h3 className="font-bold text-lg">Add new task</h3>
+            <h3 className="font-bold text-lg">Edit the Task</h3>
             <div className="modal-action">
               <input
                 value={editTaskValue}
